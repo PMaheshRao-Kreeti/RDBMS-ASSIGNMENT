@@ -1,4 +1,4 @@
--- Table creation for each dataset
+-- Table creation
 
 CREATE TABLE regions(
   region_id SERIAL PRIMARY KEY,
@@ -85,21 +85,21 @@ VALUES ('10 STREET','245878','RANCHI','JHARKHAND',1),
 ('40 STREET','934567','LONDON','LONDON',4);
 
 --Inserting data in department
-INSERT INTO department(department_name,location_id) VALUES 
+INSERT INTO departments(department_name,location_id) VALUES 
 ('HR',1),('OPERATION',2),('MARKETING',4),('SLAES',3),('ADMIN','5');
 
 --Inserting data in employees table
 INSERT INTO employees(first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES
-('KARAN','SINGH','karan@gmail.com','8390209830','2017-10-19',2,50000,null,4),
+('KARAN','SINGH','karan@gmail.com','8390209830','2017-10-19',2,50000,1, 4),
 ('KARAN','KING','ran@gmail.com','8393209830','2019-12-12',5,50000,6,4),
 ('AMAN','HOSH','aman@gmial.com','7692345567','2022-07-24',4,800000,6,2),
 ('KARAM','DITA','am@gmail.com','7982463123','2015-09-13',1,65000,3,5),
-('LAXMAN','GHOSH','laxman@gmial.com','7892345567','2015-04-26',1,60000,null,5),
+('LAXMAN','GHOSH','laxman@gmial.com','7892345567','2015-04-26',1,60000,1,5),
 ('AVIALASH','CHAMAN','avi@gmail.com','9784643673','2023-04-19',4,100000,3,2),
-('AVI','MAN','avi7@gmail.com','9794643673','2021-04-19',3,80000,null,1),
-('MIT','SAH','mit@gmail.com','7658446456','2022-09-04',2,55000,6,3)
-('RAM','PANDIT','ram@gmail.com','7985463123','2019-05-23',3,70000,null,3),
-('AMIT','SAH','amit@gmail.com','7658946456','2022-08-04',5,40000,3,1),;
+('AVI','MAN','avi7@gmail.com','9794643673','2021-04-19',3,80000,3,1),
+('MIT','SAH','mit@gmail.com','7658446456','2022-09-04',2,55000,6,3),
+('RAM','PANDIT','ram@gmail.com','7985463123','2019-05-23',3,70000,3,3),
+('AMIT','SAH','amit@gmail.com','7658946456','2022-08-04',5,40000,3,1);
 
 --Inserting data in dependents table
 
@@ -127,4 +127,4 @@ ALTER TABLE employees ALTER COLUMN last_name SET NOT NULL;
 ALTER TABLE locations ALTER COLUMN pincode TYPE varchar(10);
 
 --Min_salary must be greater than 1000
-ALTER TABLE jobs ADD CHECK(min_salary > 1000);
+ALTER TABLE jobs ADD CHECK(min_salary > 1000 )
