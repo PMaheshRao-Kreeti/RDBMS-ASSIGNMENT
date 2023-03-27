@@ -12,7 +12,7 @@ limit 10 offset 3;
 
 -- 3.Find distinct top 5 salary values ( only salary column ) , using alias for columnas “Top5salaries”
 
-select salary as Top_5_Salaries 
+select salary as "Top 5 Salaries" 
 from employees 
 order by salary desc limit 5;
 
