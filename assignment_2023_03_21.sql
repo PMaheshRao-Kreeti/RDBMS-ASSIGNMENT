@@ -44,4 +44,3 @@ from employees as emp, departments as dept
 where emp.department_id = dept.department_id
 group by emp.department_id, dept.department_name;
 
-
