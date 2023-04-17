@@ -98,3 +98,6 @@ i.e. due to some system error system shutdown in that case the data is get store
 
 The Occupation column has been used to make the index. the Occupation column when sorted in asc order it will come in the mentioned index pattern 1,3,2,5,4 .
 
+
+
+
